@@ -1,10 +1,11 @@
+import { hamburger } from "../assets/icons"
 import { headerLogo } from "../assets/images"
 import { navLinks } from "../Constants"
 
 const Navbar = () => {
   return (
     <header className="padding-x py-8 absolute z-10 w-full">
-        <nav className="flex justify-center items-center max-container">
+        <nav className="flex justify-center items-center max-container max-lg:justify-between">
             <a href="/">
                 <img 
                     src={headerLogo}
@@ -24,7 +25,16 @@ const Navbar = () => {
                         </a>
                     </li>
                 ))}
+                <li><a href="#">Sign in</a></li>
             </ul>
+            <div className="hidden max-lg:block">
+                    <img 
+                        src={hamburger}
+                        alt="hamburger"
+                        width={25}
+                        height={25}
+                    />
+            </div>
         </nav>
     </header>
   )
